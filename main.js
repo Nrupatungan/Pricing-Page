@@ -10,19 +10,22 @@ categories.value = "";
 products.addEventListener('change', () => {
     if (products.value !== ""){
         animate.classList.add("animation");
+        animate.style.animation = "slide 1s forwards";
+        categories.addEventListener('change', () => {
+            if (categories.value !== ""){
+                btnContainer.classList.add("d-block");
+                table.classList.add("d-block");
+                table.style.animation = "slide 1s forwards";
+            } else {
+                btnContainer.classList.remove("d-block");
+                table.classList.remove("d-block");
+            }
+        })
     } else {
         animate.classList.remove("animation");
-        update();
+        btnContainer.classList.remove("d-block");
+        table.classList.remove("d-block");
+        categories.value = "";
     }
 })
 
-categories.addEventListener('change', () => {
-    if (categories.value !== ""){
-        btnContainer.classList.add("d-block");
-        table.classList.add("d-block");
-        table.style.animation = "slide 1s forwards";
-    } else {
-        btnContainer.classList.remove("d-block");
-        table.classList.remove("d-block");
-    }
-})

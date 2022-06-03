@@ -34,7 +34,7 @@ select{
 
 .animation{
     display: block;
-    animation: slide 1s forwards;
+    /* animation: slide 1s forwards; */
 }
 
 .table-container, .btn-container{
