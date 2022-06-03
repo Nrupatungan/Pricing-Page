@@ -3,6 +3,7 @@ const categories = document.querySelector('select[name="categories"]')
 const animate = document.querySelector('.animate');
 const btnContainer = document.querySelector('.btn-container');
 const table = document.querySelector('.table-container');
+const dropdownItem = document.querySelector('.currency .dropdown-menu');
 
 products.value = "";
 categories.value = "";
@@ -26,6 +27,23 @@ products.addEventListener('change', () => {
         btnContainer.classList.remove("d-block");
         table.classList.remove("d-block");
         categories.value = "";
+    }
+});
+
+dropdownItem.addEventListener('click', (e) => {
+    // console.log(e.target.getAttribute('data-name'));
+    switch (true) {
+        case e.target.getAttribute('data-name') === "inr":
+            console.log('le inr');
+            break;
+    
+        case e.target.getAttribute('data-name') === "euro":
+            console.log('le euro');
+            break;
+        
+        default:
+            console.log('le usd');
+            break;
     }
 })
 
