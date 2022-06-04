@@ -12,16 +12,11 @@ select{
 
 select[name="currencies"]{
     height: 2.4em;
-    width: 6.1em;
+    width: 6.3em;
     border-radius: 6px;
     padding: 0 .5em;
     color: white;
     margin-left: .5rem;
-}
-
-option[value="line"] span{
-    height: 2px;
-    background-color: white;
 }
 
 .btn-container{
