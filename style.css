@@ -10,6 +10,15 @@ select{
     background: rgb(233, 230, 230);
 }
 
+select[name="currencies"]{
+    height: 2.4em;
+    width: 6.1em;
+    border-radius: 6px;
+    padding: 0 .5em;
+    color: white;
+    margin-left: .5rem;
+}
+
 .btn-container{
     margin:3rem 0;
 }

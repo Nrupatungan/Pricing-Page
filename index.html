@@ -7,7 +7,7 @@
     <title>Pricing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -67,16 +67,12 @@
                     </ul>
                 </div>
 
-                <div class="btn-group mx-2 currency">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    Currency
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" data-name="inr">INR</a></li>
-                      <li><a class="dropdown-item" href="#" data-name="usd">USD</a></li>
-                      <li><a class="dropdown-item" href="#" data-name="euro">EURO</a></li>
-                    </ul>
-                </div>
+                  <select class="bg-primary" name="currencies" id="currencySelector">
+                    <!-- <option value="">Currency</option> -->
+                    <option value="inr">INR</option>
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                </select>
             </div>
 
             <div class="table-container table-responsive">
@@ -105,7 +101,7 @@
                       <td class="text-center">HDD</td>
                       <td>20GB</td>
                       <td>100Mbps</td>
-                      <td class="pricing-cell" class="pricing-cell"><span>$</span>20</td>
+                      <td class="currency" data-currencyName="usd"><span>&euro;</span>20</td>
                       <td><button class="btn btn-primary">Order</button></td>
                     </tr>
                     <tr class="align-middle">
@@ -117,7 +113,7 @@
                       <td class="text-center">HDD</td>
                       <td>40GB</td>
                       <td>120Mbps</td>
-                      <td class="pricing-cell"><span>$</span>30</td>
+                      <td class="currency" data-currencyName="usd"><span>&dollar;</span>30</td>
                       <td><button class="btn btn-primary">Order</button></td>
                     </tr>
                     <tr class="align-middle">
@@ -129,7 +125,7 @@
                       <td class="text-center">HDD</td>
                       <td>60GB</td>
                       <td>140Mbps</td>
-                      <td class="pricing-cell"><span>$</span>40</td>
+                      <td class="currency" data-currencyName="usd"><span>&#8377;</span>40</td>
                       <td><button class="btn btn-primary">Order</button></td>
                     </tr>
                     <tr class="align-middle">
@@ -141,7 +137,7 @@
                       <td class="text-center">HDD</td>
                       <td>80GB</td>
                       <td>160Mbps</td>
-                      <td class="pricing-cell"><span>$</span>50</td>
+                      <td class="currency" data-currencyName="usd"><span>&#8377;</span>50</td>
                       <td><button class="btn btn-primary">Order</button></td>
                     </tr>
                     <tr class="align-middle">
@@ -153,7 +149,7 @@
                       <td class="text-center">HDD</td>
                       <td>100GB</td>
                       <td>180Mbps</td>
-                      <td class="pricing-cell"><span>$</span>60</td>
+                      <td class="currency" data-currencyName="usd"><span>&#U+0024;</span>60</td>
                       <td><button class="btn btn-primary">Order</button></td>
                     </tr>
                     <tr class="align-middle">
@@ -165,7 +161,7 @@
                       <td class="text-center">HDD</td>
                       <td>120GB</td>
                       <td>200Mbps</td>
-                      <td class="pricing-cell"><span>$</span>70</td>
+                      <td class="currency" data-currencyName="usd"><span>$</span>70</td>
                       <td><button class="btn btn-primary">Order</button></td>
                     </tr>
                     <tr class="align-middle">
@@ -177,12 +173,13 @@
                       <td class="text-center">HDD</td>
                       <td>140GB</td>
                       <td>220Mbps</td>
-                      <td class="pricing-cell"><span>$</span>80</td>
+                      <td class="currency" data-currencyName="usd"><span>$</span>80</td>
                       <td><button class="btn btn-primary">Order</button></td>
                     </tr>
                   </tbody>
                 </table>
             </div>
+
         </main>
     </div>
 </body>
